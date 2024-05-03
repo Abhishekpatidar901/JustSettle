@@ -48,7 +48,7 @@ MERN Stack Group Expense Splitting Application
 <br/>
 <h2 id="introduction">Introduction</h2>
 <br/>
-<p> A full stack expense spliting app - splitwise clone made using the MERN stack (MongoDB, Express, React &amp; Nodejs), specially designed to split group expense between friends, but can be used for almost any type of business need. With this application, you can add your expense details and get an whole expense analytics feature - Group Balance, Monthly amount spend, Catagory wise expense spending graph etc... <a href="https://github.com/tuzup/SplitApp/">Source code</a>.</p>
+<p> A full stack expense spliting app - splitwise clone made using the MERN stack (MongoDB, Express, React &amp; Nodejs), specially designed to split group expense between friends, but can be used for almost any type of business need. With this application, you can add your expense details and get an whole expense analytics feature - Group Balance, Monthly amount spend, Catagory wise expense spending graph etc... <a href="https://github.com/Abhishekpatidar901/JustSettle">Source code</a>.</p>
 <br/>
 
 <h2 id="key-features">Key Features</h2>
