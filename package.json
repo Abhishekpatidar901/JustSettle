@@ -5,8 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "npx nodemon app.js",
-    "server": "nodemon app.js",
-    "build": "npm install --prefix ./client && npm run build --prefix ./client && npm install",
+    "server": "node app.js",
+    "build": "cd client && npm install && npm run build && cd .. && npm install",
     "dev": "concurrently \"npm test\" \"cd client && npm start\" "
   },
   "keywords": [
