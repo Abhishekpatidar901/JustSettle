@@ -4,8 +4,8 @@ var logger = require('./helper/logger')
 var requestLogger = require('./helper/requestLogger')
 var apiAuth = require('./helper/apiAuthentication')
 var cors = require('cors')
-
 const path = require('path');
+
 dotenv.config()
 
 var usersRouter = require('./routes/userRouter')
@@ -22,7 +22,7 @@ app.use('/api/group', apiAuth.validateToken,gorupRouter)
 app.use('/api/expense', apiAuth.validateToken,expenseRouter)
 
 if (process.env.NODE_ENV === 'production' || process.env.NODE_ENV === 'staging') {
-    app.use(express.static('/client/build'));
+    app.use(express.static(path.join(__dirname, 'client', 'build')));
     app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname,'client','build','index.html'));
     });
