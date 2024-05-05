@@ -1,12 +1,12 @@
 {
-  "name": "splitapp",
+  "name": "JustSettle",
   "version": "1.0.0",
   "description": "This is a group money spliting app made with MERN stack ",
   "main": "app.js",
   "scripts": {
     "test": "npx nodemon app.js",
     "server": "nodemon app.js",
-    "build": "cd client && npm install && npm run build",
+    "build": "npm install --prefix ./client && npm run build --prefix ./client && npm install",
     "dev": "concurrently \"npm test\" \"cd client && npm start\" "
   },
   "keywords": [
