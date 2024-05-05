@@ -2,7 +2,7 @@ import axios from 'axios'
 
 
 
-const API = axios.create({ baseURL: 'http://localhost:3000'})
+const API = axios.create({ baseURL: 'http://localhost:3001'})
 
 const profile = JSON.parse(localStorage.getItem('profile'))
 
@@ -31,6 +31,8 @@ export const getEmailList = () => API.get('/api/users/v1/emailList', accessHeade
 export const createGroup = (formData) => API.post('/api/group/v1/add', formData,  accessHeader)
 
 export const editGroup = (formData) => API.post('/api/group/v1/edit', formData, accessHeader)
+
+// export const deleteGroup = (formData) => API.delete('/api/group/v1/delete',formData, accessHeader)
 
 export const getGroupDetails = (formData) => API.post('/api/group/v1/view', formData, accessHeader)
 

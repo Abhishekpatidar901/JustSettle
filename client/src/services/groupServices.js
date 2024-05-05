@@ -35,6 +35,19 @@ export const editGroupService = async (data, setAlert, setAlertMessage) => {
     }
 }
 
+// export const deleteGroupService = async (data, setAlert, setAlertMessage) => {
+//     try{
+//         const delete_response = await api.deleteGroup(data)
+//         return delete_response
+//     }catch(err){
+//         setAlert(true)
+//         err.response.status === 400 || err.response.status === 401
+//         ? setAlertMessage(err.response.data.message) : setAlertMessage("Oops! Something went worng")
+//         return false
+//     }
+// }
+
+
 export const getGroupDetailsService = async(data, setAlert, setAlertMessage) =>{
     try{
         const group_details = await api.getGroupDetails(data)

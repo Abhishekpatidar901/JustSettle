@@ -1,7 +1,7 @@
 import { Box, Button, Container, Divider, Fab, Grid, Link, Stack, styled, Typography } from '@mui/material';
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { getGroupDetailsService, getGroupExpenseService } from '../../../services/groupServices';
+import { getGroupDetailsService, getGroupExpenseService, deleteGroupService } from '../../../services/groupServices';
 import AlertBanner from '../../AlertBanner';
 import Iconify from '../../Iconify';
 import Loading from '../../loading';
@@ -13,6 +13,9 @@ import GroupMonthlyGraph from './groupMonthlyGraph';
 import { Link as RouterLink } from 'react-router-dom';
 import dataConfig from '../../../config.json';
 import { GroupSettlements } from '../settlement';
+import { IconButton } from '@mui/material';
+
+import DeleteIcon from '@mui/icons-material/DeleteOutline';
 
 const profile = JSON.parse(localStorage.getItem('profile'))
 const emailId = profile?.emailId
@@ -25,7 +28,7 @@ export default function ViewGroup() {
     const [alert, setAlert] = useState(false);
     const [alertMessage, setAlertMessage] = useState('');
     const [alertExpense, setAlertExpense] = useState(false);
-    const [alertExpenseMessage, setAlertExpenseMessage] = useState('');
+    const [alertExpenseMessage, setAlertExpenseMessage, ] = useState('');
     const [showAllExp, setShowAllExp] = useState(false);
     const [expFocus, setExpFocus] = useState(false);
     const [expenses, setExpenses] = useState()
@@ -39,6 +42,14 @@ export default function ViewGroup() {
         setExpFocus(true)
         showCount += 5
     }
+    // const handleDelete =  async (id) => {
+    //     // Your delete logic here
+    //     console.log(`Deleting group with ID: ${id}`);
+    //     const create_response = await deleteGroupService({ id: id }, setAlert, setAlertMessage);
+    //     if (create_response) {
+    //         window.location.href = dataConfig.DASHBOARD_HOME_URL;
+    //     }
+    // };
 
 
     const toggleExpView = () => {
@@ -118,7 +129,15 @@ export default function ViewGroup() {
                             to={dataConfig.EDIT_GROUP_URL + group?._id}>
                             <Iconify icon="akar-icons:edit" sx={{ float: 'right', fontSize: 18 }} />
                         </Link>
-                        <Typography variant="h4" pb={1}>
+                        <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
+            {/* <IconButton
+                 onClick={() => handleDelete(group?._id)}
+                sx={{ color: '#007BFF', paddingTop: '0px' }}
+            >
+                <DeleteIcon fontSize="small" />
+            </IconButton> */}
+        </Box>
+                        <Typography variant="h4" pb={1} >
                             {group?.groupName}
                         </Typography>
                         <Typography variant="subtitle2">

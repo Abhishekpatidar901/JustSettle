@@ -214,14 +214,7 @@ Validation: exisitng group Id
 */
 exports.deleteGroup = async (req, res) => {
     try {
-        const group = await model.Group.findOne({
-            _id: req.body.id
-        })
-        if (!group) {
-            var err = new Error("Invalid Group Id")
-            err.status = 400
-            throw err
-        }
+
         var delete_group = await model.Group.deleteOne({
             _id: req.body.id
         })
