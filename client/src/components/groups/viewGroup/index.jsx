@@ -350,7 +350,7 @@ export default function ViewGroup() {
                                 Group Balance
                             </Typography>
 
-                            <Typography variant="subtitle" onClick={toggleMySettleView} noWrap sx={{
+                            {/* <Typography variant="subtitle" onClick={toggleMySettleView} noWrap sx={{
                                 cursor: 'pointer', fontSize: 18,
                                 width: '100%',
                                 textAlign: 'center',
@@ -367,7 +367,7 @@ export default function ViewGroup() {
                                 })
                             }}>
                                 My Balance
-                            </Typography>
+                            </Typography> */}
                         </Stack>
                         <Grid container mt={2} rowSpacing={2} columnSpacing={{ xs: 1, md: 2 }}
                             justifyContent={'center'}
