@@ -8,11 +8,11 @@ function simplifyDebts(transactions){
         for(let tr1 of transaction_map.keys()){
             vis.set(tr1, 1);
             for(let tr2 of transaction_map.keys()){
-                if(!vis.has(tr2) && tr1 != tr2){
+                if(!vis.has(tr2) && tr1 != tr2){ // between two persons
                     if(transaction_map.get(tr2) == -transaction_map.get(tr1)){
-                        if(transaction_map.get(tr2) > transaction_map.get(tr1)){
+                        if(transaction_map.get(tr2) > transaction_map.get(tr1)){//t1 ko dena hai
                             splits.push([tr1, tr2, transaction_map.get(tr2)])
-                        }else{
+                        }else{ //t1 ko lena hai
                             splits.push([tr2, tr1, transaction_map.get(tr1)])
                         }
                         transaction_map.set(tr2, 0)
@@ -41,8 +41,8 @@ function simplifyDebts(transactions){
     function helper(){
         let minMax = getMaxMinCredit();
         if( minMax[0] == undefined || minMax[1] == undefined) return;
-        let min_value = Math.min(-transaction_map.get(minMax[0]), transaction_map.get(minMax[1]));
-        transaction_map.set(minMax[0], transaction_map.get(minMax[0]) + min_value);
+        let min_value = Math.min(-transaction_map.get(minMax[0]), transaction_map.get(minMax[1]));//take the minimum value(can be borrowd or given)
+        transaction_map.set(minMax[0], transaction_map.get(minMax[0]) + min_value);//
         transaction_map.set(minMax[1], transaction_map.get(minMax[1]) - min_value);
         min_value =  Math.round((min_value  + Number.EPSILON) * 100) / 100;
         let res = [minMax[0], minMax[1], min_value];
