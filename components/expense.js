@@ -398,7 +398,7 @@ exports.groupMonthlyExpense = async (req, res) => {
 new Date(new Date().setMonth(new Date().getMonth() - 5))
 /*
 Group Daily Expense Function 
-This function is used to get the dailyly amount spend in a group 
+This function is used to get the daily amount spend in a group 
 Accepts : group Id 
 Returns : Expense per day (current year)
 */
