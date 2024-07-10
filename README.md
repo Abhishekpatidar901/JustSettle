@@ -8,7 +8,7 @@ A full-stack expense-splitting app - a Splitwise clone made using the MERN stack
 
 ## Introduction
 
-This project is a comprehensive solution for managing and tracking group expenses. It allows users to create groups, add expenses, and view detailed analytics on their spending habits. The application is designed to be intuitive and user-friendly, making it easy to manage shared expenses and settle balances.
+This project is a comprehensive solution for managing and tracking group expenses. It allows users to create groups, add expenses, and view detailed analytics on their spending habits. The application is designed to be intuitive and user-friendly, making it easy to manage shared expenses and settle balances. The application is deployed on Render with GitHub and MongoDB Atlas for automated builds and deployments.
 
 ## Key Features
 
