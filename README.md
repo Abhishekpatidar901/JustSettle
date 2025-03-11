@@ -5,6 +5,9 @@
 # JustSettle- MERN Stack Group Expense Splitting Application
 
 A full-stack expense-splitting app - a Splitwise clone made using the MERN stack (MongoDB, Express, React & Node.js), specially designed to split group expenses between friends but can be used for almost any type of business need. With this application, you can add your expense details and get comprehensive expense analytics, including Group Balance, Monthly Amount Spent, and Category-wise Expense Spending graphs.
+Test login -> 
+    email rohitv123@gmail.com
+    password rohitv@123
 
 ## Introduction
 
